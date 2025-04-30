@@ -31,6 +31,7 @@ import ExitTokenScreen from '../screens/mainScreens/ExitTokenScreen'
 import UpdateProfileScreen from '../screens/mainScreens/UpdateProfile'
 import UpdateBankDetailsScreen from '../screens/mainScreens/UpdateBankDetailsScreen'
 import UpdatePasswordScreen from '../screens/mainScreens/UpdatePasswordScreen'
+import InboxScreen from '../screens/mainScreens/InboxScreen'
 
 const TopTab = createMaterialTopTabNavigator();
 
@@ -119,6 +120,7 @@ const StackNavigator = () => {
         <Stack.Screen name='Profile' component={ProfileScreen} />
         <Stack.Screen name='UpdateBank' component={UpdateBankDetailsScreen} />
         <Stack.Screen name='UpdatePassword' component={UpdatePasswordScreen} />
+        <Stack.Screen name='Inbox' component={InboxScreen}/>
 
         <Stack.Screen name='ParkingVerification' component={ParkingVerificationNavigator} />
         <Stack.Screen name='ParkingSetup' component={ParkingSetupScreen} />

@@ -205,11 +205,8 @@ const HomeScreen = ({ navigation }) => {
           <TextInput placeholder="Search for parking" placeholderTextColor="#999" style={styles.input} />
         </View>
         <View style={styles.headerIcons}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate('Inbox')}>
             <Icon name="message-processing-outline" size={28} color="white" />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="message-processing" size={28} color="white" style={styles.iconSpacing} />
           </TouchableOpacity>
         </View>
       </View>
@@ -272,7 +269,7 @@ const styles = StyleSheet.create({
   headerIcons: {
     flexDirection: 'row',
     position: 'absolute',
-    right: 15,
+    right: 30,
     top: 10,
   },
   iconSpacing: {
