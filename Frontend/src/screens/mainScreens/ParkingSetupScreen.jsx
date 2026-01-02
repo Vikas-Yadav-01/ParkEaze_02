@@ -78,7 +78,7 @@ const ParkingSetupScreen = ({ navigation }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await axios.post(
-        'http://192.168.0.101:5000/parkings/parking-setup',
+        'http://192.168.0.100:5000/parkings/parking-setup',
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -39,7 +39,7 @@ const LoginScreen = ({ navigation }) => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://192.168.0.101:5000/users/login", { phoneNumber, password });
+      const response = await axios.post("http://192.168.0.100:5000/users/login", { phoneNumber, password });
       const token = response.data.token;
       await AsyncStorage.setItem("token", token)
       setLoading(false);

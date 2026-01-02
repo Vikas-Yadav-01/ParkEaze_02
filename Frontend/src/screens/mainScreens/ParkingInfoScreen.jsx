@@ -116,7 +116,7 @@ const ParkingInfoScreen = ({ navigation }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await axios.post(
-        'http://192.168.0.101:5000/parkings/create-parking',
+        'http://192.168.0.100:5000/parkings/create-parking',
         { parkingName, address, latitude: latitude.toString(), longitude: longitude.toString() },
         { headers: { Authorization: `Bearer ${token}` } }
       );

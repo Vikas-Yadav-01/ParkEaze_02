@@ -33,7 +33,7 @@ const ExitTokenScreen = ({ navigation }) => {
         return;
       }
       
-      const response = await axios.post('http://192.168.0.103:5000/parkings/exit-token',
+      const response = await axios.post('http://192.168.0.100:5000/parkings/exit-token',
         { exitToken },
         { headers: { Authorization: `Bearer ${token}` } }
       );

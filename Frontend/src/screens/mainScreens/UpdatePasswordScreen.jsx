@@ -33,7 +33,7 @@ const UpdatePasswordScreen = ({ navigation }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await axios.patch(
-        'http://192.168.0.104:5000/users/update-password',
+        'http://192.168.0.100:5000/users/update-password',
         { oldPassword, newPassword, confirmPassword },
         { headers: { Authorization: `Bearer ${token}` } }
       );

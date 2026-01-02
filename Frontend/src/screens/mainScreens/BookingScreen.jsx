@@ -46,7 +46,7 @@ const BookingScreen = ({ route, navigation }) => {
         setLoading(true);
         try {
             const token = await AsyncStorage.getItem('token');
-            const response = await axios.post('http://192.168.0.104:5000/bookings/book-parking', {
+            const response = await axios.post('http://192.168.0.100:5000/bookings/book-parking', {
                 parkingId: parking._id,
                 vehicleType: selectedVehicleType,
                 vehicleNumber,

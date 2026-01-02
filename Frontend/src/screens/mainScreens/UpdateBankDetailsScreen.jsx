@@ -25,7 +25,7 @@ const UpdateBankDetailsScreen = ({ navigation }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await axios.post(
-        'http://192.168.0.104:5000/users/bank-details',
+        'http://192.168.0.100:5000/users/bank-details',
         { bankName, accountNumber, ifscCode },
         { headers: { Authorization: `Bearer ${token}` } }
       );

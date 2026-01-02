@@ -72,7 +72,7 @@ const PersonalDetailScreen = ({ navigation }) => {
 
       const token = await AsyncStorage.getItem('token');
       const response = await axios.post(
-        'http://192.168.0.101:5000/users/documents',
+        'http://192.168.0.100:5000/users/documents',
         formData,
         {
           headers: {

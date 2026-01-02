@@ -13,7 +13,7 @@ const ParkingHistoryScreen = ({ navigation }) => {
     const fetchParkingHistory = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        const response = await axios.get('http://192.168.0.103:5000/parkings/history', {
+        const response = await axios.get('http://192.168.0.100:5000/parkings/history', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (response.data.success) {

@@ -14,7 +14,7 @@ const MyParkingScreen = ({ navigation }) => {
     const fetchParkingData = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        const response = await axios.get('http://192.168.0.103:5000/parkings/parking', {
+        const response = await axios.get('http://192.168.0.100:5000/parkings/parking', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setParkingData(response.data.parking);

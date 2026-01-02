@@ -24,7 +24,7 @@ const UpdateProfileScreen = ({ navigation }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await axios.patch(
-        'http://192.168.0.105:5000/users/update-profile',
+        'http://192.168.0.100:5000/users/update-profile',
         { userName, phoneNumber, role },
         { headers: { Authorization: `Bearer ${token}` } }
       );

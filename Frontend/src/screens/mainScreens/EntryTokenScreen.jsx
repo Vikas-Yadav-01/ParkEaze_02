@@ -26,7 +26,7 @@ const EntryTokenScreen = ({ navigation }) => {
     setLoading(true);
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await axios.post('http://192.168.0.103:5000/parkings/entry-token',
+      const response = await axios.post('http://192.168.0.100:5000/parkings/entry-token',
         { entryToken },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -15,7 +15,7 @@ const EarningsScreen = ({ navigation }) => {
   const fetchEarnings = async () => {
     try {
       const token = await AsyncStorage.getItem('token');
-      const response = await axios.get('http://192.168.0.103:5000/earnings/todays-earning', {
+      const response = await axios.get('http://192.168.0.100:5000/earnings/todays-earning', {
         headers: { Authorization: `Bearer ${token}` },
         params: { date: selectedDate }
       });

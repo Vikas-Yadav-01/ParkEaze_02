@@ -52,7 +52,7 @@ const SignUpScreen = ({ navigation }) => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://192.168.0.101:5000/users/sign-up", { userName, phoneNumber, password, role });
+      const response = await axios.post("http://192.168.0.100:5000/users/sign-up", { userName, phoneNumber, password, role });
       const token = response.data.token
       await AsyncStorage.setItem("token", token)
       setLoading(false);

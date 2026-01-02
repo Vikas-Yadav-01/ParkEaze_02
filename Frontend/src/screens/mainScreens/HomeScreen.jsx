@@ -123,7 +123,7 @@ const HomeScreen = ({ navigation }) => {
         const token = await AsyncStorage.getItem('token');
         if (!token) throw new Error('No token found');
 
-        const response = await axios.get("http://192.168.0.101:5000/parkings/find-parking", {
+        const response = await axios.get("http://192.168.0.100:5000/parkings/find-parking", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
